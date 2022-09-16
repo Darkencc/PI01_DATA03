@@ -4,23 +4,22 @@ USE PI_DTS_03;
 SET GLOBAL log_bin_trust_function_creators = 1;
 
 /*Importacion de las tablas*/
-DROP TABLE IF EXISTS `circuits`;
-CREATE TABLE IF NOT EXISTS `circuits` (
-  	`Idcircuit` 	INTEGER,
-  	`Refcircuit` 	VARCHAR(40),
-  	`Name` 	        VARCHAR(40),
-    `Location`		VARCHAR(40),
-  	`Country` 		VARCHAR(40),
-    `Latitud`       VARCHAR(40),
-    `Longitud`		VARCHAR(40),
-    `Altitud`		VARCHAR(40),
-    `URL` 			VARCHAR(110)
+DROP TABLE IF EXISTS `circuit`;
+CREATE TABLE IF NOT EXISTS `circuit` (
+  	`Idcircuit`    INTEGER,
+  	`Refcircuit`   VARCHAR(40),
+  	`Name` 	       VARCHAR(40),
+	`Location`	   VARCHAR(40),
+  	`Country` 	   VARCHAR(40),
+    `Latitud`      VARCHAR(40),
+    `Longitud`	   VARCHAR(40),
+    `Altitud` 	   VARCHAR(40),
+    `URL`          VARCHAR(180)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;	
-truncate table circuits;
 LOAD DATA INFILE 'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\circuits.csv' 
-INTO TABLE `circuits` 
+INTO TABLE `circuit` 
 FIELDS TERMINATED BY ',' ENCLOSED BY '' ESCAPED BY '' 
-LINES TERMINATED BY '\n' IGNORE 1 LINES;
+LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
 
 
 DROP TABLE IF EXISTS `race`;
@@ -37,6 +36,6 @@ CREATE TABLE IF NOT EXISTS `race` (
 LOAD DATA INFILE 'C:\\ProgramData\\MySQL\\MySQL Server 8.0\\Uploads\\PI\\races.csv' 
 INTO TABLE `race` 
 FIELDS TERMINATED BY ',' ENCLOSED BY '' ESCAPED BY '' 
-LINES TERMINATED BY '\n' IGNORE 1 LINES;
+LINES TERMINATED BY '\r\n' IGNORE 1 LINES;
 
-select * from circuits;
+select * from race;
