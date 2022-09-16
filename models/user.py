@@ -14,6 +14,7 @@ circuits = Table("circuit", meta,
         Column("Altitud", String(255)),
         Column("URL", String(255))) 
 
+
 races = Table("race", meta, 
         Column("Idrace", Integer, primary_key=True), 
         Column("Year", Integer),
