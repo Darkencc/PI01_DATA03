@@ -36,4 +36,6 @@ Vamos a traducir el párrafo anterior en una imágen:
 FastAPI es un web framework moderno y rápido (de alto rendimiento) para construir APIs con Python 3.6+ basado en las anotaciones de tipos estándar de Python.  
 Posee Guías explicativas detalladas paso por paso, donde podrán sacarse todas las dudas que vayan surgiendo con respecto al uso de esta.  
 
+### La carpeta de trabajo es la que dice FINAL, en en cual se realizo el proyecto
+
 <img src = "https://user-images.githubusercontent.com/96025598/188937586-28575753-fbd6-42de-beca-81ae35b659e0.gif" height = 300>
